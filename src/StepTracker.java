@@ -30,15 +30,10 @@ class StepTracker {
                 System.out.println("Новая цель на день: " + newGoalByStepsPerDay + ".");
             } else {
                 System.out.println("Необходимо ввести значение больше нуля!");
-                ChangeStepGoal();
+                menuChangeStepGoal();
             }
             return;
         }
-    }
-
-    void ChangeStepGoal() {
-
-        menuChangeStepGoal();
     }
 
     public void addNewNumberStepsPerDay() {
@@ -78,9 +73,12 @@ class StepTracker {
         }
     }
 
-    void statistic() {
+    void printStatistic() {
 
         while (true) {
+
+            // ввод и проверка номера месяца
+            System.out.println("Введите номер месяца от 1 до 12 (включительно): ");
 
             month = scanner.nextInt();
 
@@ -133,13 +131,5 @@ class StepTracker {
             }
             return;
         }
-    }
-
-    void printStatistic() {
-
-        // ввод и проверка номера месяца
-        System.out.println("Введите номер месяца от 1 до 12 (включительно): ");
-        statistic();
-
     }
 }

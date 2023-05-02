@@ -1,3 +1,10 @@
+/* Добрый вечер! Приятно познакомиться. Спасибо, что проверил работу. Согласен со всеми замечаниями.
+В методе StepTracker я создал метод changeStepGoal думая, что метод menuChangeStepGoal не сможет вызвать сам себя))
+Оказывается может) Также я удалил метод printStatistic в классе StepTracker. Этот метод я тоже с такой же логикой
+создал, думая, что метод не может вызывать сам себя)
+*/
+
+
 import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
@@ -15,7 +22,7 @@ class Main {
                 stepTracker.addNewNumberStepsPerDay();
             } else if (commands == 2) {
                 // Изменить цель по количеству шагов в день
-                stepTracker.ChangeStepGoal();
+                stepTracker.menuChangeStepGoal();
             } else if (commands == 3) {
                 // Напечатать статистику за определённый месяц
                 stepTracker.printStatistic();
